@@ -14,7 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
         this commmand helps to install all the required packages. once the installation is done, just follow step2.
 
-`step2` :Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically open in default browser in you system.
+`step2` :Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically open in default browser in you system.
 
  
 ## ----------------- Well well `You did!` & Thant's it Enjoy ---------------------
