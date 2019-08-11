@@ -16,6 +16,8 @@ this commmand helps to install all the required packages. once the installation 
 
 `step2` :enter this `ng serve --open` command in command(or Terminal) window for to open application
  and this one runs under dev server. after execute thecommand you can Navigate to `http://localhost:4200/`.
+  
+            ex: C:\Users\dell\Desktop\e-gmat-mock-test> ng serve --open 
  
 ## ----------------- Well well `You did!` & Thant's it Enjoy ---------------------
 
