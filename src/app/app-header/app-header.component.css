@@ -1,0 +1,31 @@
+.header__main{
+    background: #1d4997;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #1d4997);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #1d4997); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 6px -6px #01223a;
+}
+h1{
+    font-size: 2.8rem;
+    font-weight: 300;
+    color:white;
+}
+
+@media only screen and (max-width: 30em)
+{
+    .header__main{
+      height: 6vh;
+    }
+}
+
+@media only screen and (max-width: 22.5em)
+{
+    .header__main{
+        height: 5vh;
+    }
+      
+}

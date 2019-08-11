@@ -1,0 +1,21 @@
+<form (ngSubmit)="loadGraphs(f)" class="container" #f="ngForm">
+    <div class='quant__fields' >
+        <h1>Quant</h1>
+        <div class= 'input_fields'>
+                <label for="quant_current">Current</label>
+                <input name="quant_current"  ngModel type="number" pattern="^([1-9]|[1-5][0-9]|60|all)$" required>
+                <label for="quant_target">target</label>
+                <input name="quant_target" ngModel type="number"  pattern="^([1-9]|[1-5][0-9]|60|all)$" required>
+        </div>
+    </div>
+    <div  class='verbal__fields'>
+        <h1>Verbal</h1>
+        <div class= 'input_fields'>
+                <label for="verbal_current">current</label>
+                <input name="verbal_current"  ngModel type="number"  pattern="^([1-9]|[1-5][0-9]|60|all)$" required>
+                <label for="verbal_target">target</label>
+                <input name="verbal_target" ngModel type="number" pattern="^([1-9]|[1-5][0-9]|60|all)$" required>
+        </div>
+    </div>
+    <button class='submit__btn'  type='submit' [disabled]="!f.valid" >Submit and Refresh</button>
+</form>

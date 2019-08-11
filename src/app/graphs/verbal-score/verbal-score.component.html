@@ -1,0 +1,30 @@
+<div class='bar__graph--container'>
+    <ng-content></ng-content>
+    <h1>{{graphData.currentScore}}</h1>
+    <div class='bar__graph--section'>
+        <div class='bar__graph bar__graph--base'></div>
+        <div class='bar__graph bar__graph--target-v' >
+            <span class='marker' [ngClass]=" (graphData.difference.value < 10)?'marker__icon--down-t2':'marker__icon--down-t1'"></span>
+            <span class='marker__text' [ngClass]="(graphData.difference.value < 10)?'marker__text--down-t2':'marker__text--down-t1'">
+            {{graphData.targetScore}}
+            </span>
+            <p *ngIf="graphData.difference.type === 'LOWER'"
+               [ngClass]=" graphData.difference.value > 10 ? 'diff_inside':'diff_outside'"
+              [ngStyle]="{ 'margin-left': graphData.currentwidth}"
+            >
+                +{{graphData.difference.value}}
+            </p>
+        </div>
+        <div  class='bar__graph bar__graph--current-v'>
+            <span class='marker marker__icon--up'></span>
+            <span class='marker__text marker__text--up'>
+            {{graphData.currentScore}}
+            </span>
+        </div>
+    </div>
+    <div class="bar__graph--desc">
+        <p *ngIf="graphData.difference.type === 'EQUAL'; else elsedescBlock">Your estimated {{graphData.type}} score per your performance in this mock test is {{graphData.currentScore}}, which is equal to target score
+        </p>
+        <ng-template #elsedescBlock>Your estimated  {{graphData.type}} score per your performance in this mock test is {{graphData.currentScore}}, which is <span>{{graphData.difference.value}} points</span> {{graphData.difference.type | lowercase}} than your target  {{graphData.type}} score of {{graphData.targetScore}}.</ng-template>
+    </div>
+</div>

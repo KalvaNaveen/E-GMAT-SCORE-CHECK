@@ -1,0 +1,12 @@
+@import '../graph.css';
+
+    .bar__graph--current-q{
+        background-color: #0fa2eb;
+       
+    }
+    .bar__graph--target-q{
+        background-color: #ffe28a;
+      
+    }
+    
+   

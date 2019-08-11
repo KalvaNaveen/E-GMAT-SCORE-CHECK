@@ -1,0 +1,139 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    margin: 0 3em;
+}
+
+
+.quant__fields{
+    grid-area: 1/1/2/2;
+}
+.verbal__fields{
+    grid-area: 1/2/2/3;
+}
+.submit__btn{
+    grid-area: 2/1/3/3;
+    justify-self: center;
+}
+.input_fields{
+  display: flex;
+  flex-direction: row;
+  
+}
+h1{
+    font-weight: 300;
+    margin: .5rem 0;
+    font-size: 3.2rem;
+    letter-spacing: .1rem;
+    color: #1f1f1fe3;
+  }
+  label{
+      font-size: 2.4rem;
+      color: #1f1f1fb8;
+      font-weight: 300;
+  }
+
+  input{
+    width: 10em;
+    padding:.6em 1.2em;
+    margin: 0 1.8em 0 1.1em;
+    border-radius: .5em;
+    outline: none;
+    border: 1px solid #a9a9a9;
+  }
+  button {
+    background-color: #0889ca; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 12em;
+    padding: 0.4em .8em;
+    font-size: 1.6rem;
+    border-radius: .5em;
+    font-weight: 300;
+    outline: none;
+    position: relative;
+    top: 4em;
+  }
+  
+  [disabled]{
+    cursor:no-drop;
+    opacity: .6;
+  }
+
+button:active {
+   transform: scale(.98);
+  }
+
+  input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  input.ng-valid{
+    border: 1px solid green;
+  }
+
+  @media only screen and (max-width: 64.000em)
+  {
+   
+    .input_fields{
+      justify-content: flex-start;
+    }
+ }
+
+  
+ @media only screen and (max-width: 48.000em)
+ {
+  .container{
+    grid-template-columns: 1fr;
+  }
+  input{
+    width: 6em;
+    padding:0.4em;
+    outline: none;
+    border: 1px solid #a9a9a9;
+}
+ 
+}
+@media only screen and (max-width: 30em)
+{
+  .container{
+    padding: 1em;
+    margin: 0 1em;}
+
+    .input_fields{
+   
+      justify-content: center;
+    }
+    .quant__fields{
+      grid-area: 1/1/2/2;
+  }
+  .verbal__fields{
+      grid-area: 2/1/3/2;
+  }
+  .submit__btn{
+      grid-area: 3/1/4/2;
+  }
+    
+    
+ }
+ @media only screen and (max-width: 22.5em)
+{
+  .container{
+  
+    grid-template-columns: 1fr;
+    padding: 0;
+    margin: 6px 1em 0 2rem;
+  
+  }
+    input{
+      width: 5em;
+      padding: .4em .8em;
+      margin: auto 1em;
+  }
+    
+ }
